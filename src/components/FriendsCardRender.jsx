@@ -1,13 +1,21 @@
-import data from '../../public/data.json'
-const FriendsCardRender = async () => {
+"use client"
+import Link from 'next/link';
+import useHooks from '@/hooks/useHooks';
 
+const FriendsCardRender =  () => {
 
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+ const {loading,friends} = useHooks();
+
+const data = friends;
 
     const sharedStyle = " text-white rounded-full px-3 py-1 text-sm font-medium";
     return (
+        <>
+
+        <div>{loading && <span className=" loading loading-spinner text-success"></span>}</div>
         <div className='grid lg:grid-cols-4 grid-cols-1 gap-4 p-4'>
             {data.map((user) => (
+                <Link href={`/friends/${user.id}`} key={user.id}>
                 <div key={user.id} className="bg-white rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden">
                     <div className="h-16 bg-gradient-to-r from-green-900 to-emerald-500"></div>
                     <div className="px-4 -mt-10 flex items-center justify-center">
@@ -32,8 +40,11 @@ const FriendsCardRender = async () => {
                         </div>
                     </div>
                 </div>
+                 </Link>
             ))}
+            
         </div>
+       </>
     );
 };
 
