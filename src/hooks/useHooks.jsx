@@ -18,7 +18,7 @@ const useHooks = () => {
         fetchdata();    
     },[])
 
-    return {loading , friends}
+    return {loading,friends}
 };
 
 export default useHooks;
