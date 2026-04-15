@@ -16,10 +16,10 @@ export default function Home() {
           </div>
         </section>
         <section className="w-8/12 mx-auto grid lg:grid-cols-4 grid-cols-2 gap-4 my-8">
-          <div className="px-3 py-10 rounded-lg shadow flex flex-col text-center bg-white "><h1 className="text-3xl font-bold">10</h1> <p className="text-gray-400">Total Friends</p></div>
-          <div className="px-3 py-10 rounded-lg shadow flex flex-col text-center bg-white "><h1 className="text-3xl font-bold">3</h1> <p className="text-gray-400">On Track</p></div>
-          <div className="px-3 py-10 rounded-lg shadow flex flex-col text-center bg-white "><h1 className="text-3xl font-bold">6</h1> <p className="text-gray-400">Need Attention</p></div>
-          <div className="px-3 py-10 rounded-lg shadow flex flex-col text-center bg-white "><h1 className="text-3xl font-bold">12</h1> <p className="text-gray-400">Interaction This Month</p></div>
+          <div className="px-3 py-10 rounded-lg shadow flex flex-col text-center bg-white "><h1 className="text-3xl font-bold text-success">20</h1> <p className="text-gray-400">Total Friends</p></div>
+          <div className="px-3 py-10 rounded-lg shadow flex flex-col text-center bg-white "><h1 className="text-3xl font-bold text-success">7</h1> <p className="text-gray-400">On Track</p></div>
+          <div className="px-3 py-10 rounded-lg shadow flex flex-col text-center bg-white "><h1 className="text-3xl font-bold text-success">6</h1> <p className="text-gray-400">Need Attention</p></div>
+          <div className="px-3 py-10 rounded-lg shadow flex flex-col text-center bg-white "><h1 className="text-3xl font-bold text-success">12</h1> <p className="text-gray-400">Interaction This Month</p></div>
 
         </section>
         <section className="w-8/12 mx-auto text-center">
