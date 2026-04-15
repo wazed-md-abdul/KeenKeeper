@@ -22,7 +22,7 @@ const [filteredList, setFilteredList]= useState(interections);
                 
         }
 
-
+        
     },[sortType,interections]);
 
 

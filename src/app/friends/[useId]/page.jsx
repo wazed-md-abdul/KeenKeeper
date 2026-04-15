@@ -13,6 +13,7 @@ const FriendsData = ({ params }) => {
   const { useId } = use(params);
 const {interections, setInterections} =useContext(InterectionsContext);
 
+
  
   if (loading) {
     return (
