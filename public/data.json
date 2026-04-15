@@ -6,14 +6,13 @@
     "email": "rafiul.hasan@gmail.com",
     "days_since_contact": 18,
     "status": "overdue",
-    "tags": [
-      "university",
-      "close friend",
-      "roommate"
-    ],
+    "tags": ["university", "close friend", "roommate"],
     "bio": "Met at BUET during freshman year. We were roommates for 3 years. Now he works as a civil engineer in Chattogram.",
     "goal": 14,
-    "next_due_date": "2026-04-10"
+    "next_due_date": "2026-04-10",
+    "why_contact": "Check in on his new infrastructure project and catch up on life in Chattogram.",
+    "preferred_contact": "WhatsApp",
+    "relationship_detail": "Former roommate, lifelong brother"
   },
   {
     "id": 2,
@@ -22,14 +21,13 @@
     "email": "nusrat.jahan.dhaka@yahoo.com",
     "days_since_contact": 5,
     "status": "on-track",
-    "tags": [
-      "childhood",
-      "neighbour",
-      "close friend"
-    ],
+    "tags": ["childhood", "neighbour", "close friend"],
     "bio": "Grew up in the same para in Mirpur. We've known each other since Class 3. She's now a doctor at Dhaka Medical College Hospital.",
     "goal": 10,
-    "next_due_date": "2026-04-18"
+    "next_due_date": "2026-04-18",
+    "why_contact": "She mentioned starting a community health camp — want to hear how it went.",
+    "preferred_contact": "phone call",
+    "relationship_detail": "Childhood neighbour, like a sister"
   },
   {
     "id": 3,
@@ -38,14 +36,13 @@
     "email": "tanvir.ahmed.cse@gmail.com",
     "days_since_contact": 11,
     "status": "almost due",
-    "tags": [
-      "work",
-      "tech",
-      "cricket buddy"
-    ],
+    "tags": ["work", "tech", "cricket buddy"],
     "bio": "Colleague at a fintech startup in Gulshan. We bond over cricket — rarely miss a Bangladesh match together. Sharp developer and great teammate.",
     "goal": 12,
-    "next_due_date": "2026-04-14"
+    "next_due_date": "2026-04-14",
+    "why_contact": "Discuss the upcoming Bangladesh vs. India series and his thoughts on the new project stack at work.",
+    "preferred_contact": "Telegram",
+    "relationship_detail": "Work colleague, cricket companion"
   },
   {
     "id": 4,
@@ -54,14 +51,13 @@
     "email": "sumaiya.akter91@hotmail.com",
     "days_since_contact": 25,
     "status": "overdue",
-    "tags": [
-      "university",
-      "study group",
-      "mentor"
-    ],
+    "tags": ["university", "study group", "mentor"],
     "bio": "Study group partner from Dhaka University. She mentored me through my thesis on Bengali literature. Now a lecturer at Rajshahi University.",
     "goal": 21,
-    "next_due_date": "2026-04-05"
+    "next_due_date": "2026-04-05",
+    "why_contact": "Ask for her guidance on a research paper I'm drafting. She always gives the sharpest feedback.",
+    "preferred_contact": "email",
+    "relationship_detail": "Academic mentor, trusted guide"
   },
   {
     "id": 5,
@@ -70,14 +66,13 @@
     "email": "imran.chowdhury.bd@gmail.com",
     "days_since_contact": 3,
     "status": "on-track",
-    "tags": [
-      "college",
-      "travel buddy",
-      "photography"
-    ],
+    "tags": ["college", "travel buddy", "photography"],
     "bio": "Met at Notre Dame College in Dhaka. We travel together every Eid — last trip was Cox's Bazar. He runs a popular travel photography page on Facebook.",
     "goal": 7,
-    "next_due_date": "2026-04-17"
+    "next_due_date": "2026-04-17",
+    "why_contact": "Plan our next Eid trip and check out his new photo series from Sundarbans.",
+    "preferred_contact": "Facebook Messenger",
+    "relationship_detail": "College friend, adventure partner"
   },
   {
     "id": 6,
@@ -86,14 +81,13 @@
     "email": "farida.begum.sylhet@gmail.com",
     "days_since_contact": 9,
     "status": "almost due",
-    "tags": [
-      "family friend",
-      "cooking",
-      "long-distance"
-    ],
+    "tags": ["family friend", "cooking", "long-distance"],
     "bio": "Family friend from Sylhet. Our parents have known each other for decades. She moved to Sylhet City after marriage but we stay in regular touch.",
     "goal": 10,
-    "next_due_date": "2026-04-14"
+    "next_due_date": "2026-04-14",
+    "why_contact": "She promised to share her hilsa recipe — also just want to check in on how she's settling in.",
+    "preferred_contact": "phone call",
+    "relationship_detail": "Family friend, warm confidante"
   },
   {
     "id": 7,
@@ -102,14 +96,13 @@
     "email": "sabbir.rahman.khulna@gmail.com",
     "days_since_contact": 33,
     "status": "overdue",
-    "tags": [
-      "school",
-      "childhood",
-      "football"
-    ],
+    "tags": ["school", "childhood", "football"],
     "bio": "Best friend from school in Khulna. We played football together for 6 years. He's now running his family's shrimp export business in Mongla.",
     "goal": 30,
-    "next_due_date": "2026-04-01"
+    "next_due_date": "2026-04-01",
+    "why_contact": "It's been too long — catch up on the business and reminisce about our Khulna days.",
+    "preferred_contact": "phone call",
+    "relationship_detail": "Childhood best friend, football teammate"
   },
   {
     "id": 8,
@@ -118,14 +111,13 @@
     "email": "maliha.sultana.ngo@gmail.com",
     "days_since_contact": 6,
     "status": "on-track",
-    "tags": [
-      "work",
-      "activist",
-      "book club"
-    ],
+    "tags": ["work", "activist", "book club"],
     "bio": "We met at a climate action workshop in Dhaka. Both avid readers — we run a small Bengali book club together online. She works for an NGO focused on flood-affected communities.",
     "goal": 14,
-    "next_due_date": "2026-04-20"
+    "next_due_date": "2026-04-20",
+    "why_contact": "Pick the next book club title and hear about her latest field work in Sylhet's haor region.",
+    "preferred_contact": "email",
+    "relationship_detail": "Fellow activist, book club co-organiser"
   },
   {
     "id": 9,
@@ -134,14 +126,13 @@
     "email": "arif.hossain.buet@gmail.com",
     "days_since_contact": 13,
     "status": "almost due",
-    "tags": [
-      "university",
-      "engineering",
-      "startup"
-    ],
+    "tags": ["university", "engineering", "startup"],
     "bio": "Lab partner from BUET's EEE department. He co-founded a solar energy startup in Bogura after graduating. One of the most driven people I know.",
     "goal": 14,
-    "next_due_date": "2026-04-14"
+    "next_due_date": "2026-04-14",
+    "why_contact": "Want to learn about his startup's latest solar pilot project and possibly connect him with an investor I know.",
+    "preferred_contact": "LinkedIn",
+    "relationship_detail": "University lab partner, inspiring entrepreneur"
   },
   {
     "id": 10,
@@ -150,13 +141,12 @@
     "email": "riya.chakraborty.bd@gmail.com",
     "days_since_contact": 2,
     "status": "on-track",
-    "tags": [
-      "art",
-      "college",
-      "close friend"
-    ],
+    "tags": ["art", "college", "close friend"],
     "bio": "Met at Charukala (Faculty of Fine Arts) in Dhaka. She's an incredible painter whose work has been exhibited in Shilpakala Academy. We grab tea in Aziz Super Market regularly.",
     "goal": 7,
-    "next_due_date": "2026-04-18"
+    "next_due_date": "2026-04-18",
+    "why_contact": "She has a new exhibition coming up — want to confirm I'm attending and hear about the theme.",
+    "preferred_contact": "Instagram DM",
+    "relationship_detail": "College friend, creative inspiration"
   }
 ]

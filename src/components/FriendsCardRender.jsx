@@ -2,11 +2,13 @@
 import Link from 'next/link';
 import useHooks from '@/hooks/useHooks';
 
+
 const FriendsCardRender =  () => {
 
  const {loading,friends} = useHooks();
 
 const data = friends;
+
 
     const sharedStyle = " text-white rounded-full px-3 py-1 text-sm font-medium";
     return (

@@ -3,6 +3,8 @@ import { Geist} from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import InterectionsProvider, { InterectionsContext } from "@/context/installcontext";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,8 +25,11 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col">
         
         <NavBar />
+        <InterectionsProvider>
         {children}
+        </InterectionsProvider>
         <Footer />
+        <ToastContainer />
         </body>
     </html>
   );

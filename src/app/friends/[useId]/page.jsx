@@ -1,19 +1,19 @@
 "use client";
 import Link from "next/link";
-import { use } from "react";
+import { use, useContext } from "react";
 import useHooks from "@/hooks/useHooks";
+import { InterectionsContext } from "@/context/installcontext";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Zoom } from 'react-toastify';
 
-const interactions = [
-  { type: "Text", icon: "💬", desc: "Asked for career advice", date: "Jan 28, 2026" },
-  { type: "Meetup", icon: "🤝", desc: "Industry conference meetup", date: "Jan 28, 2026" },
-  { type: "Video", icon: "🎥", desc: "Asked for career advice", date: "Jan 28, 2026" },
-  { type: "Text", icon: "💬", desc: "Asked for career advice", date: "Jan 28, 2026" },
-];
- 
+
 const FriendsData = ({ params }) => {
   const {loading, friends } = useHooks();
   const { useId } = use(params);
+const {interections, setInterections} =useContext(InterectionsContext);
 
+ 
   if (loading) {
     return (
       <div className="min-h-screen bg-slate-100 flex items-center justify-center p-4 sm:p-6 lg:p-8">{loading && <span className=" loading loading-spinner text-success"></span>}</div>
@@ -22,7 +22,21 @@ const FriendsData = ({ params }) => {
 
   const user = friends.find(friend => friend.id === parseInt(useId));
 
-
+const handleInterections = (label) => {
+  toast.success(`${label} has been send to ${user.name} `, {
+position: "top-center",
+autoClose: 2500,
+hideProgressBar: false,
+closeOnClick: true,
+pauseOnHover: false,
+draggable: true,
+progress: undefined,
+theme: "dark",
+transition: Zoom,
+});
+setInterections([...interections,{ type: label, with: user.name, icon: label==="Text" ? "💬" : label==="Meetup" ? "🤝" : "🎥", desc: user.why_contact, date: new Date().toLocaleDateString() } ]);
+  
+};
   console.log(friends);
 const sharedStyle = " text-white rounded-full px-3 py-1 text-sm font-medium";
 
@@ -64,8 +78,8 @@ const sharedStyle = " text-white rounded-full px-3 py-1 text-sm font-medium";
                 }
 
               </div>
-              <p className="text-sm text-slate-500 italic">Former colleague, great mentor</p>
-              <p className="text-xs text-slate-400 mt-1">Preferred: email</p>
+              <p className="text-sm text-slate-500 italic">{user.relationship_detail}</p>
+              <p className="text-xs text-slate-400 mt-1">Preferred: {user.email}</p>
             </div>
 
             {/* Actions */}
@@ -123,7 +137,7 @@ const sharedStyle = " text-white rounded-full px-3 py-1 text-sm font-medium";
                   { label: "Text", icon: "💬" },
                   { label: "Video", icon: "🎥" },
                 ].map(({ label, icon }) => (
-                  <button
+                  <button onClick={()=>{handleInterections(label)}}
                     key={label}
                     className="flex flex-col items-center gap-2 py-4 rounded-xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all text-sm text-slate-600 font-medium"
                   >
@@ -143,13 +157,14 @@ const sharedStyle = " text-white rounded-full px-3 py-1 text-sm font-medium";
                 </button>
               </div>
               <div className="divide-y divide-slate-100">
-                {interactions.map((item, i) => (
+                {interections.map((item, i) => (
                   <div key={i} className="flex items-center gap-3 py-3">
                     <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-base shrink-0">
                       {item.icon}
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-medium text-slate-700">{item.type}</p>
+                      <p className="text-xs text-slate-400 truncate">{item.with}</p>
                       <p className="text-xs text-slate-400 truncate">{item.desc}</p>
                     </div>
                     <span className="text-xs text-slate-400 shrink-0">{item.date}</span>
