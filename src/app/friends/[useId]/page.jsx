@@ -36,7 +36,7 @@ progress: undefined,
 theme: "dark",
 transition: Zoom,
 });
-const newInterection ={ type: label,with: user.name, icon: label==="Text" ? "💬" : label==="Meetup" ? "🤝" : "🎥", desc: user.why_contact, date: new Date().toLocaleDateString() };
+const newInterection ={ type: label, with: user.name, icon: label==="Text" ? "💬" : label==="Meetup" ? "🤝" : "🎥", desc: user.why_contact, date: new Date().toLocaleDateString() };
 addToLocalDB(newInterection);
 setInterections([...getAllFromLocalDB(), newInterection ]);
   

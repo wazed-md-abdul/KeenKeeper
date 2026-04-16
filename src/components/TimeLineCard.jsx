@@ -2,39 +2,45 @@
 import { InterectionsContext } from '@/context/installcontext';
 import React, { useContext, useEffect, useState } from 'react';
 
-const TimeLineCard = ({sortType}) => {
+const TimeLineCard = ({sortType,search}) => {
 const { interections } = useContext(InterectionsContext);
 const [filteredList, setFilteredList]= useState(interections);
-    useEffect(() => {
-        if(sortType){
-            if(sortType === "Date"){
-                   setFilteredList(interections.sort((a, b) => new Date(b.date) - new Date(a.date)))
-            }
-            else if(sortType ==="Call")
-                setFilteredList(interections.filter((interection) => interection.type === "Call"));
-            else if(sortType ==="Video")
-                setFilteredList(interections.filter((interection) => interection.type === "Video"));
-            else if(sortType ==="Text")
-                setFilteredList(interections.filter((interection) => interection.type === "Text"));
-            else if(sortType ==="All")
-                setFilteredList(interections);
-          
-                
-        }
+console.log(search);
 
-        
-    },[sortType,interections]);
+   useEffect(() => {
+    let updatedList = [...interections];
 
+   
+    if (search) {
+        updatedList = updatedList.filter((item) =>
+            item.with.toLowerCase().includes(search.toLowerCase())
+        );
+    }
 
-    console.log(filteredList);
+    if (sortType === "Date") {
+        updatedList = updatedList.sort(
+            (a, b) => new Date(b.date) - new Date(a.date)
+        );
+    } else if (sortType === "Call") {
+        updatedList = updatedList.filter((item) => item.type === "Call");
+    } else if (sortType === "Video") {
+        updatedList = updatedList.filter((item) => item.type === "Video");
+    } else if (sortType === "Text") {
+        updatedList = updatedList.filter((item) => item.type === "Text");
+    }
+
+    setFilteredList(updatedList);
+
+}, [sortType, interections, search]);
+
     
     return (
         <>
         
         {filteredList.length > 0 ? (
                         <div className="flex flex-col w-full gap-4 my-8">
-                            {filteredList.map((interection) => (
-                                <div className="px-3 py-10 rounded-lg shadow flex items-start bg-white" key={interection.id}>
+                            {filteredList.map((interection,index) => (
+                                <div className="px-3 py-10 rounded-lg shadow flex items-start bg-white" key={interection.id || index}>
                                     <div className="flex items-center gap-1">
                                         <div>
                                             {interection.icon}

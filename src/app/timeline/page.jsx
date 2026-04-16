@@ -10,22 +10,22 @@ const TimeLine = () => {
 
 
 
-    const { interections } = useContext(InterectionsContext);
+const { interections } = useContext(InterectionsContext);
+const [search, setSearch] = useState('');
+console.log(search);
 
-    const handleSearch = (e) => {
-    }
+const handleSearch = (e) => {
+    const value = e.target.value.toLowerCase();
+    setSearch(value);
+};
 
     const [sortType,setSortingType] = useState("All");
-    console.log(sortType);
     
 
     return (
         <>
             <div className="bg-[#F8FAFC]">
-
-
                 <section className="flex flex-col justify-center items-start w-8/12 mx-auto w-8/12 " >
-
                     <h1 className="my-4 text-5xl font-bold">TimeLine</h1>
                     <div className="flex justify-between items-center w-full">
                         <div className="dropdown dropdown-start my-4">
@@ -42,11 +42,11 @@ const TimeLine = () => {
                         <div>
                             <label className="input">
                                 <MdManageSearch />
-                                <input onChange={() => { handleSearch() }} type="search" required placeholder="Search" />
+                                <input onChange={handleSearch} type="search" required placeholder="Search" />
                             </label>
                         </div>
                     </div>
-                    <TimeLineCard sortType={sortType} />
+                    <TimeLineCard sortType={sortType} search={search} />
 
                 </section>
 

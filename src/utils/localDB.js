@@ -8,7 +8,6 @@ const getAllFromLocalDB = () => {
 
 const addToLocalDB = (interection) => {
     if (typeof window === 'undefined') return; // prevent crash
-
     const allInterection = getAllFromLocalDB();
     allInterection.push(interection);
     localStorage.setItem('inerection', JSON.stringify(allInterection));
