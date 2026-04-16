@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- BANNER -->
-<img src="/Banner.png" alt="KeenKeeper Banner" width="100%"/>
+<img src="/public/Banner.png" alt="KeenKeeper Banner" width="100%"/>
 
 <br/>
 
