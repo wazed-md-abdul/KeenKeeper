@@ -6,7 +6,8 @@ import { InterectionsContext } from "@/context/installcontext";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Zoom } from 'react-toastify';
-
+import { addToLocalDB } from "@/utils/localDB";
+import { getAllFromLocalDB } from "@/utils/localDB";
 
 const FriendsData = ({ params }) => {
   const {loading, friends } = useHooks();
@@ -35,15 +36,16 @@ progress: undefined,
 theme: "dark",
 transition: Zoom,
 });
-setInterections([...interections,{ type: label, with: user.name, icon: label==="Text" ? "💬" : label==="Meetup" ? "🤝" : "🎥", desc: user.why_contact, date: new Date().toLocaleDateString() } ]);
+const newInterection ={ type: label,with: user.name, icon: label==="Text" ? "💬" : label==="Meetup" ? "🤝" : "🎥", desc: user.why_contact, date: new Date().toLocaleDateString() };
+addToLocalDB(newInterection);
+setInterections([...getAllFromLocalDB(), newInterection ]);
   
 };
-  console.log(friends);
 const sharedStyle = " text-white rounded-full px-3 py-1 text-sm font-medium";
 
   return (
     <>
-      <div className="min-h-screen bg-slate-100 flex items-center justify-center p-4 sm:p-6 lg:p-8">
+      <div key={user.name} className="min-h-screen bg-slate-100 flex items-center justify-center p-4 sm:p-6 lg:p-8">
         <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-[280px_1fr] gap-4">
 
           {/* LEFT COLUMN */}
