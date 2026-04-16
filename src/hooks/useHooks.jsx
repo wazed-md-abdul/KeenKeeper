@@ -11,7 +11,7 @@ const useHooks = () => {
             setTimeout(() => {
                 setFriends(data);
                 setLoading(false);
-            }, 2000);
+            }, 500);
         }
 
 
