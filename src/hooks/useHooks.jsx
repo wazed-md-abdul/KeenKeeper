@@ -1,13 +1,13 @@
 "use client"
 import React, { useEffect, useState } from "react";
 const useHooks = () => {
-    const [friends,setFriends] = useState([]);
-    const [loading,setLoading] = useState(true);
+    const [friends, setFriends] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-    useEffect(()=>{
+    useEffect(() => {
         const fetchdata = async () => {
-           const res = await fetch('/data.json');     
-           const data = await res.json();    
+            const res = await fetch('/data.json');
+            const data = await res.json();
             setTimeout(() => {
                 setFriends(data);
                 setLoading(false);
@@ -15,10 +15,11 @@ const useHooks = () => {
         }
 
 
-        fetchdata();    
-    },[])
+        fetchdata();
 
-    return {loading,friends}
+    }, [])
+
+    return { loading, friends }
 };
 
 export default useHooks;
