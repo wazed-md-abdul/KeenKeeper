@@ -38,7 +38,7 @@ Visualize your expenses through dynamic charts powered by **Recharts**. Track sp
 ### ⚡ Instant Transaction Management
 Add, edit, and delete expense records in real-time with live UI feedback via **React Toastify** notifications. Every action is smooth, snappy, and confirmed — no page reloads, no confusion.
 
-### 💾 Persistent Local Storage *(Coming Soon)*
+### 💾 Persistent Local Storage
 Your data stays with you. KeenKeeper is being upgraded with **vanilla JS LocalStorage** integration to persist all transactions across sessions — no account or backend required.
 
 ---
